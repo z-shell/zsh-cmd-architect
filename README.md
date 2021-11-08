@@ -3,75 +3,17 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Inroduction](#inroduction)
-  - [Installation](#installation)
+- [Introduction](#introduction)
+- [Installation](#installation)
   - [Installation With Zinit](#installation-with-zinit)
   - [Installation With Zgen](#installation-with-zgen)
   - [Installation With Antigen](#installation-with-antigen)
   - [Manual Installation](#manual-installation)
   - [Single File Manual Installation](#single-file-manual-installation)
-  - [Introduction](#introduction)
-  - [Performance](#performance)
-  - [Fixing tmux, screen and linux vt](#fixing-tmux-screen-and-linux-vt)
+- [Performance](#performance)
+- [Fixing tmux, screen and linux vt](#fixing-tmux-screen-and-linux-vt)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Inroduction
-
-Also check out [Zsh Navigation Tools](https://github.com/z-shell/zsh-navigation-tools)
-and [Zsh Editing Workbench](https://github.com/z-shell/zsh-editing-workbench)
-
-## Installation
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/z-shell/zsh-cmd-architect/main/doc/install.sh)"
-```
-
-To update run the command again.
-
-`ZCA` will be installed at `~/.config/zca/zsh-cmd-architect`, config files will be copied to `~/.config/zca`. `.zshrc`
-will be updated with only `4` lines of code that will be added to the bottom.
-
-After installing and reloading shell give `ZCA` a quick try with `Ctrl-T`.
-
-## Installation With [Zinit](https://github.com/z-shell/zinit)
-
-Add `zinit load z-shell/zsh-cmd-architect` to `.zshrc`. The config files will be available in `~/.config/zca`.
-
-## Installation With Zgen
-
-Add `zgen load z-shell/zsh-cmd-architect` to `.zshrc` and issue a `zgen reset` (this assumes that there is a proper `zgen save` construct in `.zshrc`).
-The config files will be available in `~/.config/zca`.
-
-## Installation With Antigen
-
-Add `antigen bundle z-shell/zsh-cmd-architect` to `.zshrc`. There also
-should be `antigen apply`. The config files will be in `~/.config/znt`.
-
-## Manual Installation
-
-After extracting `ZCA` to `{some-directory}` add following two lines to `~/.zshrc`:
-
-```zsh
-fpath+=( {some-directory} )
-source "{some-directory}/zsh-cmd-architect.plugin.zsh"
-```
-
-As you can see, no plugin manager is needed to use the `*.plugin.zsh`
-file. The above two lines of code are all that almost **all** plugin
-managers do. In fact, what's actually needed is only:
-
-```zsh
-source "{some-directory}/zsh-cmd-architect.plugin.zsh"
-```
-
-because `ZCA` detects if it is used by **any** plugin manager and can
-handle `$fpath` update by itself.
-
-## Single File Manual Installation
-
-Running script `doc/generate_single_file` will create single-file version of `ZCA`.
-It can be sourced from `.zshrc`. Don't forget about configuration files (copy them to `~/.config/zca`).
 
 ## Introduction
 
@@ -97,6 +39,61 @@ Keys are:
 - `Ctrl-K` (in incremental search) - delete whole line
 - `Ctrl-D`, `Ctrl-U` - half page up or down
 - `Ctrl-P`, `Ctrl-N` - previous and next (also done with vim's j,k)
+
+Also check out [Zsh Navigation Tools](https://github.com/z-shell/zsh-navigation-tools)
+and [Zsh Editing Workbench](https://github.com/z-shell/zsh-editing-workbench)
+
+## Installation
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/z-shell/zsh-cmd-architect/main/doc/install.sh)"
+```
+
+To update run the command again.
+
+`ZCA` will be installed at `~/.config/zca/zsh-cmd-architect`, config files will be copied to `~/.config/zca`. `.zshrc`
+will be updated with only `4` lines of code that will be added to the bottom.
+
+After installing and reloading shell give `ZCA` a quick try with `Ctrl-T`.
+
+### Installation With [Zinit](https://github.com/z-shell/zinit)
+
+Add `zinit load z-shell/zsh-cmd-architect` to `.zshrc`. The config files will be available in `~/.config/zca`.
+
+### Installation With Zgen
+
+Add `zgen load z-shell/zsh-cmd-architect` to `.zshrc` and issue a `zgen reset` (this assumes that there is a proper `zgen save` construct in `.zshrc`).
+The config files will be available in `~/.config/zca`.
+
+### Installation With Antigen
+
+Add `antigen bundle z-shell/zsh-cmd-architect` to `.zshrc`. There also
+should be `antigen apply`. The config files will be in `~/.config/znt`.
+
+### Manual Installation
+
+After extracting `ZCA` to `{some-directory}` add following two lines to `~/.zshrc`:
+
+```zsh
+fpath+=( {some-directory} )
+source "{some-directory}/zsh-cmd-architect.plugin.zsh"
+```
+
+As you can see, no plugin manager is needed to use the `*.plugin.zsh`
+file. The above two lines of code are all that almost **all** plugin
+managers do. In fact, what's actually needed is only:
+
+```zsh
+source "{some-directory}/zsh-cmd-architect.plugin.zsh"
+```
+
+because `ZCA` detects if it is used by **any** plugin manager and can
+handle `$fpath` update by itself.
+
+### Single File Manual Installation
+
+Running script `doc/generate_single_file` will create single-file version of `ZCA`.
+It can be sourced from `.zshrc`. Don't forget about configuration files (copy them to `~/.config/zca`).
 
 ## Performance
 
