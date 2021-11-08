@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+local PLUGIN_FILE="doc/zshcmdarchitect.plugin.zsh"
+
+[ -d doc ] || cd ..
+
+rm -vf "$PLUGIN_FILE"
+echo "# https://github.com/z-shell/zsh-cmd-architect" >>"$PLUGIN_FILE"
+echo "# License is GPLv3 and MIT" >>"$PLUGIN_FILE"
+echo -n "# " >>"$PLUGIN_FILE"
+git show-ref master | head -1 >>"$PLUGIN_FILE"
+echo >>"$PLUGIN_FILE"
+
+for i in h-*(on) zca zca-*(on); do
+    echo "$i() {" >>"$PLUGIN_FILE"
+    cat "$i" >>"$PLUGIN_FILE"
+    echo "}" >>"$PLUGIN_FILE"
+    echo >>"$PLUGIN_FILE"
+done
+
+# Append ^R bind
+echo "zle -N zca-widget" >>"$PLUGIN_FILE"
+echo "bindkey '^T' zca-widget" >>"$PLUGIN_FILE"
