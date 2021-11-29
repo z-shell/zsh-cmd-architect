@@ -1,21 +1,14 @@
-# `ZSH-COMMAND-ARCHITECT`
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 - [Introduction](#introduction)
-- [Installation](#installation)
-  - [Installation With Zinit](#installation-with-zinit)
-  - [Installation With Zgen](#installation-with-zgen)
-  - [Installation With Antigen](#installation-with-antigen)
-  - [Manual Installation](#manual-installation)
-  - [Single File Manual Installation](#single-file-manual-installation)
-- [Performance](#performance)
-- [Fixing tmux, screen and linux vt](#fixing-tmux-screen-and-linux-vt)
+  - [Installation](#installation)
+    - [Installation With ZI](#installation-with-zi)
+    - [Installation With Zgen](#installation-with-zgen)
+    - [Installation With Antigen](#installation-with-antigen)
+    - [Manual Installation](#manual-installation)
+    - [Single File Manual Installation](#single-file-manual-installation)
+  - [Performance](#performance)
+  - [Fixing tmux, screen and linux vt](#fixing-tmux-screen-and-linux-vt)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Introduction
+# Introduction
 
 `ZCA` allows to copy segments of commands in history, rearrange segments of current command,
 delete segments of current command. This way user glues command from parts without using
@@ -56,9 +49,9 @@ will be updated with only `4` lines of code that will be added to the bottom.
 
 After installing and reloading shell give `ZCA` a quick try with `Ctrl-T`.
 
-### Installation With [Zinit](https://github.com/z-shell/zinit)
+### Installation With [ZI](https://github.com/z-shell/zi)
 
-Add `zinit load z-shell/zsh-cmd-architect` to `.zshrc`. The config files will be available in `~/.config/zca`.
+Add `zi load z-shell/zsh-cmd-architect` to `.zshrc`. The config files will be available in `~/.config/zca`.
 
 ### Installation With Zgen
 
@@ -102,7 +95,7 @@ It can be sourced from `.zshrc`. Don't forget about configuration files (copy th
 ## Fixing tmux, screen and linux vt
 
 If `TERM=screen-256color` (often a case for `tmux` and `screen` sessions) then
-`ncv` terminfo capability will have `2`nd bit set.  This in general means that
+`ncv` terminfo capability will have `2`nd bit set. This in general means that
 underline won't work. To fix this by creating your own `ncv=0`-equipped
 terminfo file, run:
 
