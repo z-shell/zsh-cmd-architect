@@ -1,14 +1,16 @@
-- [Introduction](#introduction)
-  - [Installation](#installation)
-    - [Installation With ZI](#installation-with-zi)
-    - [Installation With Zgen](#installation-with-zgen)
-    - [Installation With Antigen](#installation-with-antigen)
-    - [Manual Installation](#manual-installation)
-    - [Single File Manual Installation](#single-file-manual-installation)
-  - [Performance](#performance)
-  - [Fixing tmux, screen and linux vt](#fixing-tmux-screen-and-linux-vt)
+<h1> Zsh Command Architect </h1>
 
-# Introduction
+- [Introduction](#introduction)
+- [Installation](#installation)
+  - [Installation With ZI](#installation-with-zi)
+  - [Installation With Zgen](#installation-with-zgen)
+  - [Installation With Antigen](#installation-with-antigen)
+  - [Manual Installation](#manual-installation)
+  - [Single File Manual Installation](#single-file-manual-installation)
+- [Performance](#performance)
+- [Fixing tmux, screen and linux vt](#fixing-tmux-screen-and-linux-vt)
+
+## Introduction
 
 `ZCA` allows to copy segments of commands in history, rearrange segments of current command,
 delete segments of current command. This way user glues command from parts without using
