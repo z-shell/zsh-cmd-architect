@@ -1,13 +1,16 @@
+# -*- mode: zsh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
+# vim: ft=zsh sw=2 ts=2 et
+#
 # Copy this file into /usr/share/zsh/site-functions/
 # and add 'autoload h-list-input` to .zshrc
 #
 # This is an internal function not for direct use
 
-emulate -L zsh
+builtin emulate -L zsh
 
 zmodload zsh/curses
 
-setopt typesetsilent
+builtin setopt typeset_silent
 
 # Compute first to show index
 _hlist_compute_first_to_show_idx() {
@@ -279,5 +282,3 @@ reply[5]="$hscroll"
 reply[6]="$search"
 reply[7]="$buffer"
 reply[8]="$uniq_mode"
-
-# vim: set filetype=zsh:

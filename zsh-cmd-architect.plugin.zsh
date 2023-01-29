@@ -8,17 +8,22 @@
 #
 
 0="${(%):-%N}" # this gives immunity to functionargzero being unset
-REPO_DIR="${0%/*}"
+
+# https://wiki.zshell.dev/community/zsh_plugin_standard#standard-plugins-hash
+typeset -gA Plugins
+Plugins[ZCA_DIR]="${0:h}"
+
 CONFIG_DIR="$HOME/.config/zca"
 
 #
 # Update FPATH if:
-# 1. Not loading with Zplugin
+# 1. Not loading with Zi
 # 2. Not having fpath already updated (that would equal: using other plugin manager)
 #
 
-if [[ -z "$ZPLG_CUR_PLUGIN" && "${fpath[(r)$REPO_DIR]}" != $REPO_DIR ]]; then
-  fpath+=( "$REPO_DIR" )
+# https://wiki.zshell.dev/community/zsh_plugin_standard#functions-directory
+if [[ $PMSPEC != *f* ]]; then
+  fpath+=( "${0:h}/functions" )
 fi
 
 #
@@ -37,7 +42,7 @@ unset __ZCA_CONFIG_FILE
 typeset -g __ZCA_CONFIG_FILE
 for __ZCA_CONFIG_FILE in "h-list.conf" "zca.conf"; do
   if [[ ! -f "$CONFIG_DIR/$__ZCA_CONFIG_FILE" ]]; then
-    command cp "$REPO_DIR/.config/zca/$__ZCA_CONFIG_FILE" "$CONFIG_DIR"
+    command cp "$Plugins[ZCA_DIR]/.config/zca/$__ZCA_CONFIG_FILE" "$CONFIG_DIR"
   fi
 done
 unset __ZCA_CONFIG_FILE

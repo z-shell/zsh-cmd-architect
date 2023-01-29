@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*za-*": "zsh"
+  },
+  "shellformat.useEditorConfig": true
+}

@@ -12,10 +12,10 @@ git show-ref master | head -1 >>"$PLUGIN_FILE"
 echo >>"$PLUGIN_FILE"
 
 for i in h-*(on) zca zca-*(on); do
-    echo "$i() {" >>"$PLUGIN_FILE"
-    cat "$i" >>"$PLUGIN_FILE"
-    echo "}" >>"$PLUGIN_FILE"
-    echo >>"$PLUGIN_FILE"
+  echo "$i() {" >>"$PLUGIN_FILE"
+  cat "$i" >>"$PLUGIN_FILE"
+  echo "}" >>"$PLUGIN_FILE"
+  echo >>"$PLUGIN_FILE"
 done
 
 # Append ^R bind

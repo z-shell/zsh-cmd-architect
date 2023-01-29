@@ -1,8 +1,10 @@
+# -*- mode: zsh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
+# vim: ft=zsh sw=2 ts=2 et
+#
 # Uses h-list
 
-emulate -LR zsh
-
-setopt extendedglob
+builtin emulate -LR zsh
+builtin setopt extended_glob
 
 _zca_has_terminfo=0
 
@@ -39,8 +41,8 @@ local two_HLIST_TRACK_SEGMENTS
 
 # Cleanup before any exit
 _zca_exit() {
-  setopt localoptions
-  setopt extendedglob
+  builtin setopt loca_options
+  builtin setopt extended_glob
   zcurses 2>/dev/null delwin main
   zcurses 2>/dev/null delwin status
   zcurses 2>/dev/null refresh
