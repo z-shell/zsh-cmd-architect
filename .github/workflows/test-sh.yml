@@ -38,6 +38,6 @@ jobs:
       - name: ⚙️ Load
         run: |
           source ~/.zshrc
+          cat ~/.zshrc
           echo "zsh version: $ZSH_VERSION"
-          echo "zsh
         shell: zsh {0}
