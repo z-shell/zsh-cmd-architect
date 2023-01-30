@@ -5,12 +5,15 @@
 </h1>
 <h2 align="center">
   <p><samp><code>ZCA</code></samp> allows to copy segments of commands in history, rearrange segments of current command, delete segments of current command. </p>
+  <p>This way user glues command from parts without using a mouse.</p><p> Advanced history search (multi word, without duplicate lines) allows to quickly find the parts.</p>
 </h2>
-<h3 align="center">
-  <p>This way user glues command from parts without using a mouse. Advanced history search (multi word, without duplicate lines) allows to quickly find the parts.</p>
-</h3><hr />
-
 <!-- <p><img align="center" src="https://raw.githubusercontent.com/z-shell/z-a-rust/main/docs/images/annex-rust.gif" alt="Zi annex rust" width="100%" height="auto" /></p> -->
+
+<div align="center">
+
+[![🐧 Test sh (Linux)](https://github.com/z-shell/zsh-cmd-architect/actions/workflows/test-sh.yml/badge.svg)](https://github.com/z-shell/zsh-cmd-architect/actions/workflows/test-sh.yml) [![✅ Zsh](https://github.com/z-shell/zsh-cmd-architect/actions/workflows/zsh-n.yml/badge.svg)](https://github.com/z-shell/zsh-cmd-architect/actions/workflows/zsh-n.yml)
+
+</div>
 
 ## 💡 Wiki: [ZCA](https://wiki.zshell.dev/ecosystem/plugins/zsh-cmd-architect) - [Plugins](https://wiki.zshell.dev/ecosystem/category/%EF%B8%8F-plugins)
 
