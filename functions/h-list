@@ -1,3 +1,6 @@
+# -*- mode: zsh; sh-indentation: 2; indent-tabs-mode: nil; sh-basic-offset: 2; -*-
+# vim: ft=zsh sw=2 ts=2 et
+#
 # $1 - main window name
 # $2, $3 - width and height of the window
 # $4 - optional status window name
@@ -11,9 +14,8 @@
 # Besides vertical navigation, it does horizontal navigation over elements of line.
 # Uses curses library
 
-emulate -LR zsh
-
-setopt typesetsilent extendedglob noshortloops
+builtin emulate -LR zsh
+builtin setopt typeset_silent extended_glob no_short_loops
 
 _hlist_has_terminfo=0
 
@@ -495,5 +497,3 @@ while (( 1 )); do
         [ -n "$wname_status" ] && zcurses clear "$wname_status" redraw
     fi
 done
-
-# vim: set filetype=zsh:
