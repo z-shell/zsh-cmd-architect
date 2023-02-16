@@ -37,6 +37,20 @@
 
 ## Installation
 
+### [Zi](https://github.com/z-shell/zi)
+
+Add `zi load z-shell/zsh-cmd-architect` to `.zshrc`.
+
+### Zgen
+
+Add `zgen load z-shell/zsh-cmd-architect` to `.zshrc` and issue a `zgen reset` (this assumes that there is a proper `zgen save` construct in `.zshrc`).
+
+### Antigen
+
+Add `antigen bundle z-shell/zsh-cmd-architect@main` to `.zshrc`. There also should be `antigen apply`.
+
+### Standalone
+
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/z-shell/zsh-cmd-architect/main/doc/install.sh)"
 ```
@@ -47,19 +61,7 @@ To update run the command again.
 
 > After installing and reloading shell give `ZCA` a quick try with <kbd><kbd>Ctrl</kbd>+<kbd>T</kbd></kbd>.
 
-### Installation With [Zi](https://github.com/z-shell/zi)
-
-Add `zi load z-shell/zsh-cmd-architect` to `.zshrc`.
-
-### Installation With Zgen
-
-Add `zgen load z-shell/zsh-cmd-architect` to `.zshrc` and issue a `zgen reset` (this assumes that there is a proper `zgen save` construct in `.zshrc`).
-
-### Installation With Antigen
-
-Add `antigen bundle z-shell/zsh-cmd-architect` to `.zshrc`. There also should be `antigen apply`.
-
-### Manual Installation
+#### Manual
 
 After extracting `ZCA` to `{some-directory}` add following two lines to `~/.zshrc`:
 
@@ -79,7 +81,7 @@ source "{some-directory}/zsh-cmd-architect.plugin.zsh"
 `ZCA` detects if it is used by **any** plugin manager and can
 handle `$fpath` update by itself.
 
-### Single File Manual Installation
+#### Single File
 
 Running script `doc/generate_single_file` will create single-file version of `ZCA`.
 
