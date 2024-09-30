@@ -22,7 +22,7 @@ jobs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
       - name: "⚡ Set matrix output"
         id: set-matrix
         run: |
@@ -37,7 +37,7 @@ jobs:
       matrix: ${{ fromJSON(needs.zsh-matrix.outputs.matrix) }}
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+        uses: actions/checkout@d632683dd7b4114ad314bca15554477dd762a938
       - name: "⚡ Install dependencies"
         run: sudo apt update && sudo apt-get install -yq zsh
       - name: "⚡ zsh -n: ${{ matrix.file }}"
